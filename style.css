@@ -1,0 +1,19 @@
+body {
+  background-image: url("drum.jpg");
+  font-size: 48px;
+  color: #fff;
+
+}
+
+.key {
+  height: 5%;
+}
+
+.sound {
+  font-size: 12px;
+}
+
+#container {
+  margin: 0 auto;
+  display: inline-block;
+}
