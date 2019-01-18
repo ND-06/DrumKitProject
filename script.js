@@ -4,12 +4,23 @@ window.addEventListener('keydown', function(e) {
   if(!audio) return;
   audio.currentTime = 0;
   audio.play();
-  console.log(key);
-  key.classList.toggle('playing');
+  key.classList.add('playing');
+
 
 });
 
+function removeTransition(e){
+  if(e.propertyName !== 'transform') {
+  return;
+  } else { // stop if it is not a transform
+  this.classList.remove('playing');
+}
+};
 
+var keys = document.querySelectorAll('.key');
+for (var i = 0; i < keys.length; i++) {
+keys[i].addEventListener("transitionend", removeTransition);
+};
 
 /*var x = document.getElementsByClassName("key"); 
 
